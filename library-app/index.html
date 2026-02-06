@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+
+  <link rel="stylesheet" href="library.css">
+  <script defer src="library.js"></script>
+</head>
+
+<body>
+  <section class="wrapper">
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+      <div class="header-left">
+        <div class="icon-wrapper">
+          <img src="assets/open-book.svg">
+        </div>
+
+        <div class="header-left-text">
+          <h1>The Library</h1>
+          <p>Your personal book collection</p>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <button id="openModalBtn">
+          <img src="assets/plus.svg">
+          <p>Add Book</p>
+        </button>
+      </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+      <!-- Stats -->
+      <section class="statistics-grid">
+
+        <div class="statistics-card">
+          <div class="icon-wrapper">
+            <img src="assets/book.svg">
+          </div>
+          <div class="text-wrapper">
+            <h2 id="totalCount">0</h2>
+            <p>Total Books</p>
+          </div>
+        </div>
+
+        <div class="statistics-card">
+          <div class="icon-wrapper">
+            <img src="assets/circle-tick.svg">
+          </div>
+          <div class="text-wrapper">
+            <h2 id="availableCount">0</h2>
+            <p>Available</p>
+          </div>
+        </div>
+
+        <div class="statistics-card">
+          <div class="icon-wrapper">
+            <img src="assets/open-book.svg">
+          </div>
+          <div class="text-wrapper">
+            <h2 id="readingCount">0</h2>
+            <p>Reading</p>
+          </div>
+        </div>
+
+        <div class="statistics-card">
+          <div class="icon-wrapper">
+            <img src="assets/time.svg">
+          </div>
+          <div class="text-wrapper">
+            <h2 id="borrowedCount">0</h2>
+            <p>Borrowed</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Search -->
+
+      <section class="search-bar">
+        <img src="assets/search.png">
+        <input id="searchInput" type="text" placeholder="Search by title or by author...">
+      </section>
+
+      <!-- Genres -->
+
+      <section class="genre-buttons">
+        <button data-genre="All">All</button>
+        <button data-genre="Fiction">Fiction</button>
+        <button data-genre="Non-Fiction">Non-Fiction</button>
+        <button data-genre="Mystery">Mystery</button>
+        <button data-genre="Science-Fiction">Science-Fiction</button>
+        <button data-genre="Fantasy">Fantasy</button>
+        <button data-genre="Biography">Biography</button>
+        <button data-genre="History">History</button>
+        <button data-genre="Science">Science</button>
+      </section>
+
+      <!-- Books -->
+
+      <section id="booksGrid" class="books-grid"></section>
+
+      <!-- Add book form -->
+
+      <section id="addBookModal" class="add-book-modal hidden">
+
+        <div class="add-book-form">
+
+          <button id="closeModalBtn" class="close-btn">&times;</button>
+
+          <h2>Add New Book</h2>
+
+          <input id="titleInput" placeholder="Book title">
+          <input id="authorInput" placeholder="Author">
+
+          <select id="genreInput">
+            <option value="">Select genre</option>
+            <option>Fiction</option>
+            <option>Non-Fiction</option>
+            <option>Mystery</option>
+            <option>Science-Fiction</option>
+            <option>Fantasy</option>
+            <option>Biography</option>
+            <option>History</option>
+            <option>Science</option>
+          </select>
+
+          <select id="statusInput">
+            <option value="">Select status</option>
+            <option value="available">Available</option>
+            <option value="reading">Reading</option>
+            <option value="borrowed">Borrowed</option>
+          </select>
+
+          <textarea id="descriptionInput" placeholder="Write a short description..." rows="3"></textarea>
+
+          <button type="button" id="addBookBtn">Add Book</button>
+
+          <p id="errorMsg" class="error-msg"></p>
+
+        </div>
+      </section>
+    </main>
+  </section>
+</body>
+
+</html>
