@@ -30,6 +30,14 @@
   gap: 1rem;
 }
 
+.search-form p {
+  color: red;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 0.3rem;
+}
+
 .search-form input {
   width: 100%;
 }

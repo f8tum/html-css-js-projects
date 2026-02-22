@@ -1,0 +1,27 @@
+JS architecture used
+
+UI layer:
+User enters city, hits submit
+Submit event is triggered
+Else prevent page from reloading
+Call the api, send city name as argument
+
+API call:
+Receive cityname
+Create an async function to await api response
+If city is invalid → throw error (api sends network request error)
+Get response in json
+Convert json to object
+Extract useful values from the data 	
+  •	city name
+	•	temperature
+	•	humidity
+	•	weather description
+	•	weather icon
+Call a function to inject html, send extracted values as arguments
+
+Inject HTML:
+Receive extracted values
+Inject values into html
+Update DOM
+Show weather card
